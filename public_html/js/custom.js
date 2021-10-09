@@ -28,7 +28,13 @@ function renderMenu(language) {
     url: "https://warre.site/api/",
     success: function(json) {
 
+      // Reset all tables
       $("#content").html("");
+      $("#Monday").html("");
+      $("#Tuesday").html("");
+      $("#Wednesday").html("");
+      $("#Thursday").html("");
+      $("#Friday").html("");
 
       $("#weeknr").html("#" + json["weeknr"]);
 
