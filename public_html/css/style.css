@@ -11,9 +11,17 @@
 .displace {
   position: relative;
   bottom: -5px;
-  /* left: -5px; */
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.select {
+  text-decoration: none;
+  border-bottom: 4px solid #5bc0de !important;
+}
+
+.ml-n-1 {
+  margin-left: -5px;
 }

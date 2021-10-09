@@ -34,6 +34,7 @@ for language in ["NL", "EN"]:
 
 fullMenu.update({"weeknr" : menu["weeknr"]})
 fullMenu.update({"location" : location})
+fullMenu.update({"nextUpdate" : menu["enddate"]})
 
 print("Content-Type: application/json\n\n")
 print(json.dumps(fullMenu, indent=1))

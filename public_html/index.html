@@ -20,18 +20,20 @@
 </head>
 
 <body class="container">
+
   <div class="row">
     <div class="col-12">
       <div class="d-inline-block">
-        <h1 class="my-3">
+	<h1 class="my-3">
           <i class="far fa-calendar-alt"></i> Week Menu
-          <span id="week" class="displace p-1 bg-dark text-white smaller">
-            nr.<span id="weeknr">?</span>
+          <span id="weeknr" class="displace p-1 bg-dark text-white ml-n-1 smaller">#?</span>
+	  <span class="text-nowrap">
+          <span class="displace p-1 bg-info text-white smaller ml-n-1">BETA</span>
+          <span id="update" class="displace p-1 bg-secondary text-white ml-n-1 smaller text-nowrap">NEXT UPDATE: ?</span>
           </span>
-          <span class="displace p-1 bg-info text-white smaller ml-1">BETA</span>
-        </h1>
+	</h1>
       </div>
-      <div id="language" class="d-inline-block align-top h-100 float-right">
+      <div id="language" class="d-inline-block position-absolute align-top h-100" style="right: 0; top: 0;">
         <p class="dropdown-toggle pointer p-2 m-1" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-nl"> </span> Dutch</p>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown">
           <p onclick="changeLanguage('EN')" class="dropdown-item pointer m-0" href="#be"><span class="flag-icon flag-icon-us"> </span> English</p>
@@ -40,69 +42,75 @@
     </div>
   </div>
 
-  <!-- <div class="row">
-    <div class="col-12 col-md p-0">
-      <div class="border">
-        <div class="border border-info text-center d-flex align-items-center justify-content-center" style="height: 50px;">
-          <p class="m-0">Monday</p>
+  <div id="gotoBtn" class="mb-3 d-lg-none d-none">
+    <a href="#select" class="btn btn-primary clickToScroll">Go to today <i class="fas fa-chevron-down"></i></a>
+  </div>
+
+  <div class="row d-lg-none">
+    <div class="col-12 p-0 mb-4">
+      <div class="card">
+        <div class="mt-2 text-center d-flex align-items-center justify-content-center" style="height: 50px;">
+          <p class="m-0 font-weight-bold selectItem">Monday</p>
+          <hr>
         </div>
-        <div id="Monday" class="border border-warning">
+        <div id="Monday" class="mx-2 mb-2">
+
         </div>
       </div>
     </div>
 
-    <div class="col-12 col-md p-0">
-      <div class="border">
-        <div class="border border-info text-center d-flex align-items-center justify-content-center" style="height: 50px;">
-          <p class="m-0">Tuesday</p>
+    <div class="col-12 p-0 mb-4">
+      <div class="card">
+        <div class="mt-2 text-center d-flex align-items-center justify-content-center" style="height: 50px;">
+          <p class="m-0 font-weight-bold selectItem">Tuesday</p>
         </div>
-        <div id="Tuesday" class="border border-warning">
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md p-0">
-      <div class="border">
-        <div class="border border-info text-center d-flex align-items-center justify-content-center" style="height: 50px;">
-          <p class="m-0">Wednesday</p>
-        </div>
-        <div id="Wednesday" class="border border-warning">
+        <div id="Tuesday" class="mx-2 mb-2">
         </div>
       </div>
     </div>
 
-    <div class="col-12 col-md p-0">
-      <div class="border">
-        <div class="border border-info text-center d-flex align-items-center justify-content-center" style="height: 50px;">
-          <p class="m-0">Thursday</p>
+    <div class="col-12 p-0 mb-4">
+      <div class="card">
+        <div class="mt-2 text-center d-flex align-items-center justify-content-center" style="height: 50px;">
+          <p class="m-0 font-weight-bold selectItem">Wednesday</p>
         </div>
-        <div id="Thursday" class="border border-warning">
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md p-0">
-      <div class="border">
-        <div class="border border-info text-center d-flex align-items-center justify-content-center" style="height: 50px;">
-          <p class="m-0">Friday</p>
-        </div>
-        <div id="Friday" class="border border-warning">
+        <div id="Wednesday" class="mx-2 mb-2">
         </div>
       </div>
     </div>
 
-  </div> -->
+    <div class="col-12 p-0 mb-4">
+      <div class="card">
+        <div class="mt-2 text-center d-flex align-items-center justify-content-center" style="height: 50px;">
+          <p class="m-0 font-weight-bold selectItem">Thursday</p>
+        </div>
+        <div id="Thursday" class="mx-2 mb-2">
+        </div>
+      </div>
+    </div>
 
-  <div class="row">
+    <div class="col-12 p-0 mb-4">
+      <div class="card">
+        <div class="mt-2 text-center d-flex align-items-center justify-content-center" style="height: 50px;">
+          <p class="m-0 font-weight-bold selectItem">Friday</p>
+        </div>
+        <div id="Friday" class="mx-2 mb-2">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row d-none d-lg-block mb-5">
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col"></th>
-          <th scope="col">Monday</th>
-          <th scope="col">Tuesday</th>
-          <th scope="col">Wednesday</th>
-          <th scope="col">Thursday</th>
-          <th scope="col">Friday</th>
+          <th class="selectItem" scope="col">Monday</th>
+          <th class="selectItem" scope="col">Tuesday</th>
+          <th class="selectItem" scope="col">Wednesday</th>
+          <th class="selectItem" scope="col">Thursday</th>
+          <th class="selectItem" scope="col">Friday</th>
         </tr>
       </thead>
       <tbody id="content">
