@@ -2,7 +2,7 @@
 
 1. Install python3.7 + install pip environment and dependencies
 ```
-pip3 install requests
+pip3 install -r requirements.txt
 ```
 3. Install apache2 + add following to /etc/apache2.conf
 
