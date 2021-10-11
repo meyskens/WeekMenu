@@ -18,7 +18,7 @@ pip3 install -r requirements.txt
     AddHandler cgi-script .py
 </Directory> 
 ```
-3. Add refer /api to absolute path on server in your site.conf
+3. Refer /api to absolute path on server in your site.conf
 
 ```
 Alias /api /var/www/html/api/menu.py
