@@ -1,7 +1,7 @@
 # WeekMenu
 
 1. Install python3.7 + install pip environment and dependencies
-2. Install apache2 + add following to config
+2. Install apache2 + add following to /etc/apache2.conf
 
 ```
 <Directory "/var/www/html/api">
@@ -15,7 +15,7 @@
     AddHandler cgi-script .py
 </Directory> 
 ```
-3. Add refer /api to absolute path on server
+3. Add refer /api to absolute path on server in your site.conf
 
 ```
 Alias /api /var/www/html/api/menu.py
