@@ -1,4 +1,4 @@
-#!/var/www/html/warre.site/api/.env/bin/python3.7
+#!/usr/bin/python3.7
 
 import requests
 import json
@@ -7,7 +7,6 @@ headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
 }
-
 
 menu = requests.get("https://tmmenumanagement.azurewebsites.net/api/WeekMenu/Geel", headers=headers).json()
 
