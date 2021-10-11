@@ -1,7 +1,10 @@
 # WeekMenu
 
 1. Install python3.7 + install pip environment and dependencies
-2. Install apache2 + add following to /etc/apache2.conf
+```
+pip3 install requests
+```
+3. Install apache2 + add following to /etc/apache2.conf
 
 ```
 <Directory "/var/www/html/api">
