@@ -25,7 +25,7 @@ function renderMenu(language) {
   $.ajax({
     contentType: 'application/json',
     type: "GET",
-    url: "https://warre.site/api/",
+    url: "/api/",
     success: function(json) {
 
       // Reset all tables
